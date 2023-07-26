@@ -5,11 +5,12 @@ import { ContextGlobal } from "../../context/Global.context";
 
 const SearchInputDisplay = ({
   submitHandler,
-  inputState,
-  inputChangeHandler,
+  inputValue,
+  placeholder,
+  inputOnChangeHandler,
   getLocationHandler,
 }) => {
-    const {state} = useContext(ContextGlobal)
+  const { state } = useContext(ContextGlobal);
   return (
     <form
       className={`${styles.searchInput} ${styles[state.themeMode]}`}
@@ -22,9 +23,9 @@ const SearchInputDisplay = ({
         <input
           id="searchInput"
           type="search"
-          placeholder="Buscar Lugares"
-          value={inputState}
-          onChange={inputChangeHandler}
+          placeholder={placeholder}
+          value={inputValue}
+          onChange={inputOnChangeHandler}
           list="searchMatch"
           autoComplete="false"
         />
