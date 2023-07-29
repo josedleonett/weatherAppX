@@ -8,7 +8,6 @@ const HeaderDisplay = () => {
     const {state} = useContext(ContextGlobal)
   return (
     <header className={styles.header}>
-      <div>HeaderDisplay throws container</div>
       <NavbarContainer />
       <TabsContainer />
     </header>

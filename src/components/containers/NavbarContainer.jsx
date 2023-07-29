@@ -5,12 +5,12 @@ import { ContextGlobal } from '../../context/Global.context';
 const NavbarContainer = () => {
     const { state, dispatch, changeThemeColor } = useContext(ContextGlobal);
 
-    const handleSwitchModeChange = () => {
+    const themeModeSwitcherHandler = () => {
       const newTheme = state.themeMode === "light" ? "dark" : "light";
       dispatch({ type: "SET_THEME_MODE", payload: newTheme });
     };
   
-    const handlerThemeColorChange = (event) => {
+    const themeColorChangeHandler = (event) => {
       const themeColorIndex = parseInt(event.target.value);
       dispatch({ type: "SET_THEME_COLOR", payload: themeColorIndex });
     };
@@ -20,7 +20,7 @@ const NavbarContainer = () => {
     }, [state.themeColor]);
 
   return (
-  <NavbarDisplay handleSwitchThemeMode={handleSwitchModeChange} />);
+  <NavbarDisplay themeModeSwitcherHandler={themeModeSwitcherHandler} />);
 }
 
 export default NavbarContainer

@@ -1,0 +1,10 @@
+.tabButtonDisplay {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.5rem;
+}
+
+.tabButtonDisplay.light {
+    color: var(--color-text-light);
+    background-color: var(--color-background-light);
+}

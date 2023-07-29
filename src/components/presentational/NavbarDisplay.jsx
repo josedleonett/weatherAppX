@@ -6,7 +6,7 @@ import { TbReload } from "react-icons/tb";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
 import styles from '../../styles/NavbarDisplay.module.css'
 
-const NavbarDisplay = ({handleSwitchThemeMode}) => {
+const NavbarDisplay = ({themeModeSwitcherHandler}) => {
     const {state} = useContext(ContextGlobal)
     
   return (
@@ -27,7 +27,7 @@ const NavbarDisplay = ({handleSwitchThemeMode}) => {
         <button>
           <TbReload />
         </button>
-        <button onClick={handleSwitchThemeMode}>
+        <button onClick={themeModeSwitcherHandler}>
           {state.themeMode == "light" ? <MdDarkMode /> : <MdLightMode />}
         </button>
       </div>
